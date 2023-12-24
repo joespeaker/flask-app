@@ -1,0 +1,140 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+::selection {
+    color: #ffffff;
+    background: #AD00FF;
+  }
+
+.bg-dark {
+    background: #000;
+}
+.mt-10 {
+    margin-top: 100px;
+}
+
+.font {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.white {
+    color: #ffffff;
+}
+.black {
+    color: #050505;
+}
+.black-shadow {
+    text-shadow: 0 0 30px #050505;
+}
+.white-shadow {
+    text-shadow: 0 0 30px #aaa;
+}
+.yellow-shadow {
+    text-shadow: 0 0 30px #F5F500;
+}
+.wb-shadow {
+    box-shadow: 0 0 50px #aaa;
+}
+.headline {
+    font-size: 80px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+.text-box {
+    margin-top: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 1000px;
+    background-color: #EEEEFF;
+    padding: 25px;
+}
+
+.text-box:focus {
+    outline: none;
+}
+
+.slider {
+    margin: 50px;
+    margin-top: 75px;
+    margin-left: 25px;
+    background-color: #AD00FF;
+    accent-color: #AD00FF;
+    background: url("../images/slider.png");
+}
+
+.form-range {
+    width: 100px !important;
+    margin: 50px;
+    margin-top: 75px;
+    color: #AD00FF !important;
+    accent-color: #F55050 !important;
+}
+
+.submit {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 1000px;
+    background-color: #AD00FF !important;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pb-shadow {
+    box-shadow: 0 0 50px #AD00FF;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #999;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;;
+}
+
+.logo {
+    margin-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: #AD00FF;
+    text-shadow: 0 0 50px #AD00FF;
+    font-size: larger;
+}
+
+.light {
+    margin-right: 35px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 18px;
+    margin-left: auto;
+    cursor: pointer;
+    color: #FFFFEE;
+}
+.ylight {
+    margin-right: 35px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 18px;
+    margin-left: auto;
+    cursor: pointer;
+    color: #F5F500;
+}
+
+.hidden {
+    display: none;
+}

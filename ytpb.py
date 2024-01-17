@@ -18,7 +18,6 @@ def download(youtube_link, room_size, wet_level, speed):
   #renames to mp3 from mp4
   new_file =  'song.mp3'
   os.rename(out_file, new_file)
-  print(yt.title + " has been successfully downloaded.")
 
 
 
@@ -32,7 +31,6 @@ def download(youtube_link, room_size, wet_level, speed):
     #values should be 0.8 and 0.1
       Reverb(room_size=room_size, wet_level=wet_level)
       ])
-  print("Successfully added reverb.")
 
   # Run the audio through this pedalboard!
   effected = board(audio, samplerate)
@@ -40,23 +38,22 @@ def download(youtube_link, room_size, wet_level, speed):
   # Write the audio back as a wav file:
   with AudioFile('processed-output.wav', 'w', samplerate, effected.shape[0]) as f:
     f.write(effected)
-  print("Successfully created new file.")
 
   #value should be 1.2
-  slow.stretch('processed-output.wav', 1.2)
-  print("Stretched song.")
+  slow.stretch('processed-output.wav', speed)
 
   #delete unprocessed files
   os.remove('song.mp3')
   os.remove('processed-output.wav')
-  print("Unprocessed files deleted.")
 
   #move file to folder on desktop
   curr_dir = os.getcwd()
-  copy_path = "/Users/joebieker/Desktop"
-  file_path = curr_dir + f"/stretched.wav"
-  shutil.move(file_path, copy_path)
-  print("File moved to desktop.")
+  file_name = "stretched.wav"
 
-  #rename file
-  os.rename("/Users/joebieker/Desktop/stretched.wav", f"/Users/joebieker/Desktop/{yt.title}.wav")
+  file_path = os.path.join(curr_dir, file_name)
+  destination_folder = "songs"
+  destination_path = os.path.join(curr_dir, destination_folder, file_name)
+
+  os.makedirs(os.path.join(curr_dir, destination_folder), exist_ok=True)
+  shutil.move(file_path, destination_path)
+  return True

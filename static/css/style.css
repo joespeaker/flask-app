@@ -60,12 +60,19 @@ html, body {
 }
 
 .slider {
-    margin: 50px;
-    margin-top: 75px;
-    margin-left: 25px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
     background-color: #AD00FF;
     accent-color: #AD00FF;
     background: url("../images/slider.png");
+}
+
+.slider-value {
+    color: #AD00FF;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .form-range {
@@ -138,3 +145,4 @@ html, body {
 .hidden {
     display: none;
 }
+

@@ -1,26 +1,39 @@
-# This file is part of https://github.com/jainamoswal/Flask-Example.
-# Usage covered in <IDC lICENSE>
-# Jainam Oswal. <jainam.me> 
-
 
 # Import Libraries 
 from app import app
 from flask import render_template
+from flask import request
 import slow
 import ytpb
 
-def slow_verb_processing(room_size, wet_level,  speed, link):
-    try:
-        ytpb.download(link, room_size, wet_level, speed)
-        return True
-    except:
-        return False
-    
+@app.route("/process_data", methods=["POST"])
+def process_data():
+    client_ip = request.remote_addr
+    if request.method == "POST":
+        room_size = request.form.get("roomSize")
+        wet_level = request.form.get("wetness")
+        speed = request.form.get("speed")
+        link = str(request.form.get("link"))
+
+        # Type conversion
+        try:
+            room_size = float(room_size)
+            wet_level = float(wet_level)
+            speed = float(speed)
+        except ValueError:
+            return "Invalid numeric input", 400
+        speed +=  1
+        success = ytpb.download(link, room_size, wet_level, speed)
+        
+
+        if success:
+            return render_template('song.html')
+        else:
+            return "Processing failed. Please check inputs and try again."  # Handle errors
 
 
 # Define route "/" & "/<name>"
 @app.route("/")
-@app.route("/<name>")
-def index(name=''):
-    return render_template('simple.html',name=name)
+def index():
+    return render_template('index.html')
 

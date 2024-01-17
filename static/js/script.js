@@ -54,3 +54,10 @@ function updateLink() {
     }
 }
 window.onload = updateLink();
+
+
+function updateSliderValue(sliderId, pId) {
+    var slider = document.getElementById(sliderId);
+    var pTag = document.getElementById(pId);
+    pTag.innerHTML = slider.value;
+}

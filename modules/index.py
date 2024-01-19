@@ -27,7 +27,7 @@ def process_data():
         
 
         if success:
-            return render_template('song.html')
+            return render_template('song.html', song_name = success)
         else:
             return "Processing failed. Please check inputs and try again."  # Handle errors
 

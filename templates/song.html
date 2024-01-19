@@ -33,13 +33,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center mt-5 mb-5">
             <audio controls>
-                <source src="../songs/stretched.wav" type="audio/wav">
+                <source src="../static/{{ song_name }}.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
         </div>
-    <footer>
+        <br>
+        <div class="text-center">
+            <a href="../static/{{ song_name }}.wav" download="{{ song_name }}.wav"><button class="btn-lg submit pb-shadow" onclick="deletefile('../static/{{ song_name }}.wav')">download</button></a>
+        </div>
+        <div class="text-center">
+            <a href="/"><button class="btn-lg ring pb-shadow">convert another</button></a>
+        </div>
+        <footer>
         <div class="row footer">
             <div class="col-12 text-center">
                 <p>

@@ -48,12 +48,12 @@ def download(youtube_link, room_size, wet_level, speed):
 
   #move file to folder on desktop
   curr_dir = os.getcwd()
-  file_name = "stretched.wav"
+  file_name = yt.title + ".wav"
+  static_folder = "static"
 
-  file_path = os.path.join(curr_dir, file_name)
-  destination_folder = "songs"
-  destination_path = os.path.join(curr_dir, destination_folder, file_name)
+  file_path = os.path.join(curr_dir, "stretched.wav")
+  destination_path = os.path.join(curr_dir, static_folder, file_name)
 
-  os.makedirs(os.path.join(curr_dir, destination_folder), exist_ok=True)
+  os.makedirs(os.path.join(curr_dir, static_folder), exist_ok=True)
   shutil.move(file_path, destination_path)
-  return True
+  return yt.title

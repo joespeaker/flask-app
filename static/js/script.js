@@ -61,3 +61,11 @@ function updateSliderValue(sliderId, pId) {
     var pTag = document.getElementById(pId);
     pTag.innerHTML = slider.value;
 }
+
+function deletefile(path) {
+    var file = path;
+    var request = new XMLHttpRequest();
+    request.open("GET",file, true);
+    request.send();
+    location.reload();
+}

@@ -97,6 +97,27 @@ html, body {
     font-weight: 400;
 }
 
+.ring {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 50px;
+    border-radius: 1000px;
+    background-color: transparent !important;
+    color: #AD00FF;
+    border: #AD00FF solid 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+.ring:hover {
+    background-color: #AD00FF !important;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
 .pb-shadow {
     box-shadow: 0 0 50px #AD00FF;
 }

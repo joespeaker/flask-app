@@ -1,6 +1,6 @@
 # SloVerb Flask App
 
-<img src="SloVerb.png" alt="SloVerb Logo" style="border-radius: 10px;">
+<img src="SloVerb.png" alt="SloVerb Logo" style="border-radius: 10%;">
 
 ## Table of Contents
 1. [Overview](#overview)

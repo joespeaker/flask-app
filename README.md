@@ -2,6 +2,16 @@
 
 This is a Flask web application named SloVerb, designed to transform any song. 
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [File Structure](#file-structure)
+4. [Installation](#installation)
+5. [Dependencies](#dependencies)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
+
 ## Overview
 
 SloVerb allows users to paste a YouTube link to a song and adjust three parameters:

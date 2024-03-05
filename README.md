@@ -9,8 +9,6 @@ This is a Flask web application named SloVerb, designed to transform any song.
 4. [Installation](#installation)
 5. [Dependencies](#dependencies)
 6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
 
 ## Overview
 

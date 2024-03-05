@@ -1,3 +1,5 @@
+![SloVerb Logo](path/to/your/logo.png)
+
 # SloVerb Flask App
 
 This is a Flask web application named SloVerb, designed to transform any song. 

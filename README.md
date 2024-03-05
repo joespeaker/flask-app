@@ -1,4 +1,4 @@
-![SloVerb Logo](path/to/your/logo.png)
+![SloVerb Logo](SloVerb.png)
 
 # SloVerb Flask App
 
